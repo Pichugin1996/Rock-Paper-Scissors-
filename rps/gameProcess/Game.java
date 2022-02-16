@@ -106,8 +106,11 @@ public class Game{
         else {
             controller.setTextWin("Ты проиграл!");
         }
-
-        setBallance();
+        try {
+            setBallance();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
         controller.setInputTextArea("");
     }
 
